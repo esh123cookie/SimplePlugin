@@ -1,0 +1,2 @@
+# SImplePlugin
+Simple Plugin Starter

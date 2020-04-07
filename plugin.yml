@@ -1,0 +1,5 @@
+name: SimplePlugin
+main: Alyx903/SimplePlugin/Main
+api: [3.0.0]
+verison: 1.0
+author: Alyx903

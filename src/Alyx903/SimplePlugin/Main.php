@@ -13,7 +13,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 
-use pocketmine\utils/TextFormat;
+use pocketmine\utils\TextFormat;
 
 class Main extends Pluginbase implements Listener {
 

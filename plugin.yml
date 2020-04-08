@@ -1,7 +1,7 @@
 name: SimplePlugin
 version: 1.4.0
 api: [3.0.0, 3.9.3, 4.0.0]
-main: Alyx903/SimplePlugin/Main
+main: TestPlugin\Main
 author: Alyx903, esh123unicorn
 commands:
   test:

@@ -21,27 +21,24 @@ class Main extends Pluginbase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
-    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
-      switch($cmd->getName()){
-        case "test":
-          if($sender instanceof Player) {
-            // real player
-            $sender->sendMessage(TextFormat::GREEN . "Hello " . $sender->getName())
-          } else {
-            
-          }
-      break;
-      }
-      
-      return true;
-    }
-  
   public function onJoin(PlayerJoinEvent $event){
     $player = $event->getPlayer();
-    
-    $player->sendMessage(TextFormat::AQUA . "Hello " . $player->getName());
-  }
+    $player->sendMessage(TextFormat::AQUA . "Hello " . $player->getName()); 
+    }
 
-
-
+    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool
+    {
+    if ($cmd->getName() == "test") {
+        if ($sender instanceof Player) {
+             if ($sender->hasPermission("test.use")) {
+                 $p = $sender->getName();
+                 $sender->sendMessage(TextFormat::AQUA . "Hello " . $p);
+                 return true;
+              } else {
+                  $sender->sendMessage($this->fts . TF::RED . "You do not have permission to use this command");
+                }
+            }
+            return true;
+        }
+    }
 }

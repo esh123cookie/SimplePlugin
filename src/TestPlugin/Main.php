@@ -1,6 +1,6 @@
 <?php
 
-namespace Alyx903\SimplePlugin;
+namespace TestPlugin;
 
 use pocketmine\Server;
 use pocketmine\Player;
